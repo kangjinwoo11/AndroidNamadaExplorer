@@ -172,7 +172,7 @@ private fun BlockDetailsComposable(
                         )
 
                         Spacer(modifier = Modifier.height(4.dp))
-                        Text(text = "Proposer:", style = MaterialTheme.typography.bodySmall)
+                        Text(text = "Transactions:", style = MaterialTheme.typography.bodySmall)
                         Text(
                             text = block.txHashes.size.toString(),
                             style = MaterialTheme.typography.titleSmall

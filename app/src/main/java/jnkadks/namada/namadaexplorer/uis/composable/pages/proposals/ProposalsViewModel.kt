@@ -30,7 +30,11 @@ class ProposalsViewModel @Inject constructor(
         viewModelScope.launch {
             proposalsState = try {
                 val response = redNetwork.fetchProposals()
-                DataState.Success(response.proposals)
+                DataState.Success(
+                    response.proposals.sortedBy {
+                        it.id
+                    }
+                )
             } catch (e: Exception) {
                 DataState.Error(e)
             }

@@ -135,7 +135,7 @@ private fun TransactionDetailsComposable(
                 )
 
                 Spacer(modifier = Modifier.height(4.dp))
-                Text(text = "TxHash:", style = MaterialTheme.typography.bodySmall)
+                Text(text = "Status:", style = MaterialTheme.typography.bodySmall)
                 if (transaction.txType == Transaction.TxType.Wrapper) {
                     SuccessComposable()
                 } else if (transaction.returnCode == 0L) {
